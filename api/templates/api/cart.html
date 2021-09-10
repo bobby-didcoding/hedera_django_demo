@@ -1,0 +1,112 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block extend_head %}
+
+
+
+{% endblock %}
+
+
+{% block extend_nav %}
+
+<ul class="sidenav">
+  <li><a href="{% url 'users:account' %}">Demo User Account</a></li>
+  <li><a class="active"  href="{% url 'api:cart' %}">Demo Cart</a></li>
+  <li><a href="{% url 'users:sign-out' %}">Sign out</a></li>
+</ul>
+
+{% endblock %}
+
+
+{% block content %}
+
+<h3>Django Hedera Hashgraph API Demo - Cart</h3>
+
+<div class="container">
+
+  <h3>This is the balance of your demo Hedera Hashgraph wallet</h3>
+  <table id="saved-cards">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Balance</td>
+        <td>{{balance}}</td>      
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <h3>Official HBAR cryptocurrency denominations</h3>
+  <table id="saved-cards">
+    <thead>
+      <tr>
+        <th>Denomination</th>
+        <th>Hbars</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>gigabar 1 Gℏ</td>
+        <td>1,000,000,000 ℏ</td>      
+      </tr>
+       <tr>
+        <td>megabar 1 Mℏ</td>
+        <td>1,000,000 ℏ</td>      
+      </tr>
+       <tr>
+        <td>kilobar 1 kℏ</td>
+        <td>1,000 ℏ</td>      
+      </tr>
+       <tr>
+        <td>hbar 1 ℏ</td>
+        <td>1 ℏ</td>      
+      </tr>
+       <tr>
+        <td>millibar 1,000 mℏ</td>
+        <td>1 ℏ</td>      
+      </tr>
+       <tr>
+        <td>microbar 1,000,000 μℏ</td>
+        <td>1 ℏ</td>      
+      </tr>
+       <tr>
+        <td>tinybar 100,000,000 tℏ</td>
+        <td>1 ℏ</td>      
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div>
+  <br>
+  <button type="submit" class="use-hbar" onclick="payWithHbar('Shirt', '6000')">Pay 6000 millibar for a shirt</button>
+</div>
+<div>
+   <br>
+  <button type="submit" class="use-hbar" onclick="payWithHbar('Pants', '4500')">Pay 4500 millibar for pants</button>
+</div>
+<div>
+    <br>
+  <button type="submit" class="use-hbar" onclick="payWithHbar('Shoes', '8700')">Pay 8700 millibar for shoes</button>
+</div>
+
+
+
+
+
+  
+</div>
+
+
+{% endblock %}
+
+{% block extend_footer %}
+
+{% endblock extend_footer %}

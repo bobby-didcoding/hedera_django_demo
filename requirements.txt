@@ -1,0 +1,7 @@
+asgiref==3.4.1
+Django==3.2.7
+hedera-sdk-py==2.0.14
+pyjnius==1.4.0
+pytz==2021.1
+six==1.16.0
+sqlparse==0.4.2
