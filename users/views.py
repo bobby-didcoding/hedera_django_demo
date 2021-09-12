@@ -62,6 +62,7 @@ def sign_up(request):
 			#create a Hedera account for user
 			hed = HederaAccount(user)
 			
+			login(request, user)
 			result = "Success"
 			message = "Your profile is now active"
 		else:
